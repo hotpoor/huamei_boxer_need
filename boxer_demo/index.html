@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>全媒体页面作品开发</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: black;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .page{
+            width: 100%;
+            height: 100%;
+            background: white;
+            background-image: url(img/background.jpg);
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+        .page_left_top{
+            position: absolute;
+            left: calc(-7/750.0*100%);
+            top: calc(13/1334.0*100%);
+            width: calc(200/750.0*100%);
+            height: calc(115/1334.0*100%);
+            background-image: url(img/left_top.png);
+            background-size: cover;
+        }
+        .page_flag{
+            position: absolute;
+            left: calc(376/750.0*100%);
+            top: calc(847/1334.0*100%);
+            width: calc(100/750.0*100%);
+            height: calc(83/1334.0*100%);
+            background-image: url(img/flag.gif);
+            background-size: cover;
+        }
+        .page_flag_base{
+            position: absolute;
+            left: calc(182/750.0*100%);
+            top: calc(868/1334.0*100%);
+            width: calc(386/750.0*100%);
+            height: calc(466/1334.0*100%);
+            background-image: url(img/flag_base.png);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="page_left_top"></div>
+        <div class="page_flag"></div>
+        <div class="page_flag_base"></div>
+
+
+
+    </div>
+    <audio id="media" controls class="hide" style="display: none;" loop="loop" src="media/lalala.mp3"></audio>
+</body>
+</html>
+<script src="js/index.js"></script>
