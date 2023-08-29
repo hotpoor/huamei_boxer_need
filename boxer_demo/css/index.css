@@ -108,6 +108,49 @@ body{
     /* 7、动画结束时应用最后一帧 */
     animation-fill-mode: forwards;
 }
-
-
+.page_loading{
+    position: absolute;
+    left: calc(102/750.0*100%);
+    top: calc(584/1334.0*100%);
+    width: calc(551/750.0*100%);
+    height: calc(39/1334.0*100%);
+    background-image: url(../img/loading.png);
+    background-size: cover;
+}
+.page_loading_flag{
+    position: absolute;
+    left: calc(97/750.0*100%);
+    top: calc(576/1334.0*100%);
+    width: calc(55/750.0*100%);
+    height: calc(55/1334.0*100%);
+    background-image: url(../img/loading_flag.png);
+    background-size: cover;
+}
+.page_loading_flag_animate{
+    /* 1、设置动画名称 */
+    animation-name: page_loading_flag_animate;
+    /* 2、动画持续时间 */
+    animation-duration: 2s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: 1;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+.page_loading_flag_text{
+    position: absolute;
+    left: calc(97/750.0*100%);
+    top: calc(526/1334.0*100%);
+    width: calc(551/750.0*100%);
+    height: calc(55/1334.0*100%);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: medium;
+}
 

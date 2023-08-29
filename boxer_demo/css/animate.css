@@ -100,3 +100,11 @@
         transform: scale(1);
     }
 }
+@keyframes page_loading_flag_animate {
+    from{
+
+    }
+    to{
+        left: calc((551 + 97/2)/750.0*100%);
+    }
+}
