@@ -15,28 +15,26 @@
 
   Hs.window_resize = function() {
     var window_height;
-    window_height = $("body").height();
+    window_height = document.querySelector("body").offsetHeight;
     Hs.current_width = window_height / Hs.base_height * Hs.base_width;
     Hs.current_height = window_height;
-    return $(".page").css({
-      "width": `${Hs.current_width}px`,
-      "height": `${Hs.current_height}px`
-    });
+    document.querySelector(".page").style.width = `${Hs.current_width}px`;
+    return document.querySelector(".page").style.height = `${Hs.current_height}px`;
   };
 
-  $(function() {
+  (function() {
     Hs.media_play = function() {
-      return $("#media")[0].play();
+      return document.querySelector("#media").play();
     };
     Hs.media_pasure = function() {
-      return $("#media")[0].pause();
+      return document.querySelector("#media").pause();
     };
-    $(window).on("load", function(evt) {
+    window.addEventListener("load", function(evt) {
       return Hs.window_resize();
     });
-    return $(window).on("resize", function(evt) {
+    return window.addEventListener("resize", function(evt) {
       return Hs.window_resize();
     });
-  });
+  })();
 
 }).call(this);
