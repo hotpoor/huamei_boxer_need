@@ -275,9 +275,33 @@ body{
     background-image: url(../img/shou.png);
     background-size: cover;
 }
+.page_title_text{
+    position: absolute;
+    left: calc(97/750.0*100%);
+    top: calc(480/1334.0*100%);
+    width: calc(551/750.0*100%);
+    height: calc(55/1334.0*100%);
+    color: #a86500;
+    font-weight: bold;
+    text-align: center;
+    font-size: medium;
+}
 
-
-
+.page_button{
+    position: absolute;
+    left: calc(121/750.0*100%);
+    top: calc(1204/1334.0*100%);
+    width: calc(506/750.0*100%);
+    height: calc(82/1334.0*100%);
+    background-image: url(../img/button.png);
+    background-size: cover;
+    text-align: center;
+    line-height: 6vh;
+    font-size: small;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 
 .page_word_fade_in{
