@@ -108,3 +108,41 @@
         left: calc((551 + 97/2)/750.0*100%);
     }
 }
+@keyframes page_finish_fade_out {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes page_finish_fade_in {
+    from{
+        opacity: 0;
+        display: none;
+    }
+    to{
+        opacity: 1;
+        display: block;
+    }
+}
+@keyframes page_dom_rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes page_word_fade_in {
+    from{
+        opacity: 0;
+        left:calc(-60/750.0*100%);
+        top: calc(-60/1334.0*100%);
+    }
+    to{
+        opacity: 1;
+    }
+}

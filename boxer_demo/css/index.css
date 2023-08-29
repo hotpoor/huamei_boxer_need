@@ -154,3 +154,208 @@ body{
     font-size: medium;
 }
 
+
+.page_2_finish{
+    display: none;
+    opacity: 0;
+}
+
+
+
+.page_center_center{
+    position: absolute;
+    left: calc(-195/750.0*100%);
+    top: calc(414/1334.0*100%);
+    width: calc(1052/750.0*100%);
+    height: calc(482/1334.0*100%);
+    background-image: url(../img/center_center.png);
+    background-size: cover;
+}
+.page_center_right{
+    position: absolute;
+    left: calc(549/750.0*100%);
+    top: calc(643/1334.0*100%);
+    width: calc(217/750.0*100%);
+    height: calc(126/1334.0*100%);
+    background-image: url(../img/center_right.png);
+    background-size: cover;
+}
+.page_media{
+    position: absolute;
+    left: calc(642/750.0*100%);
+    top: calc(30/1334.0*100%);
+    width: calc(71/750.0*100%);
+    height: calc(71/1334.0*100%);
+    background-image: url(../img/media.png);
+    background-size: cover;
+    display: none;
+    opacity: 0;
+}
+.page_scroll{
+    position: absolute;
+    left: calc(24/750.0*100%);
+    top: calc(152/1334.0*100%);
+    width: calc(693/750.0*100%);
+    height: calc(1320/1334.0*100%);
+    background-image: url(../img/scroll.png);
+    background-size: cover;
+}
+.page_heaven{
+    position: absolute;
+    left: calc(-4/750.0*100%);
+    top: calc(819/1334.0*100%);
+    width: calc(836/750.0*100%);
+    height: calc(373/1334.0*100%);
+    background-image: url(../img/heaven.png);
+    background-size: cover;
+}
+.page_flag_base1{
+    position: absolute;
+    left: calc(172/750.0*100%);
+    top: calc(593/1334.0*100%);
+    width: calc(386/750.0*100%);
+    height: calc(560/1334.0*100%);
+    background-image: url(../img/flag_base1.png);
+    background-size: cover;
+}
+.page_flag1{
+    position: absolute;
+    left: calc(366/750.0*100%);
+    top: calc(573/1334.0*100%);
+    width: calc(100/750.0*100%);
+    height: calc(82/1334.0*100%);
+    background-image: url(../img/flag1.gif);
+    background-size: cover;
+}
+.page_word{
+    opacity: 0;
+}
+.page_zheng{
+    position: absolute;
+    left: calc(224/750.0*100%);
+    top: calc(388/1334.0*100%);
+    width: calc(50/750.0*100%);
+    height: calc(58/1334.0*100%);
+    background-image: url(../img/zheng.png);
+    background-size: cover;
+}
+.page_dang{
+    position: absolute;
+    left: calc(291/750.0*100%);
+    top: calc(391/1334.0*100%);
+    width: calc(44/750.0*100%);
+    height: calc(51/1334.0*100%);
+    background-image: url(../img/dang.png);
+    background-size: cover;
+}
+.page_sheng{
+    position: absolute;
+    left: calc(352/750.0*100%);
+    top: calc(392/1334.0*100%);
+    width: calc(49/750.0*100%);
+    height: calc(49/1334.0*100%);
+    background-image: url(../img/sheng.png);
+    background-size: cover;
+}
+.page_qi{
+    position: absolute;
+    left: calc(412/750.0*100%);
+    top: calc(387/1334.0*100%);
+    width: calc(58/750.0*100%);
+    height: calc(60/1334.0*100%);
+    background-image: url(../img/qi.png);
+    background-size: cover;
+}
+.page_shou{
+    position: absolute;
+    left: calc(481/750.0*100%);
+    top: calc(392/1334.0*100%);
+    width: calc(46/750.0*100%);
+    height: calc(49/1334.0*100%);
+    background-image: url(../img/shou.png);
+    background-size: cover;
+}
+
+
+
+
+
+.page_word_fade_in{
+    /* 1、设置动画名称 */
+    animation-name: page_word_fade_in;
+    /* 2、动画持续时间 */
+    animation-duration: 1s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: 1;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.page_finish_fade_out{
+    /* 1、设置动画名称 */
+    animation-name: page_finish_fade_out;
+    /* 2、动画持续时间 */
+    animation-duration: 1s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: 1;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+.page_finish_fade_in{
+    /* 1、设置动画名称 */
+    animation-name: page_finish_fade_in;
+    /* 2、动画持续时间 */
+    animation-duration: 1s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: 1;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+
+.page_dom_rotate{
+    /* 1、设置动画名称 */
+    animation-name: page_dom_rotate;
+    /* 2、动画持续时间 */
+    animation-duration: 3s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: infinite;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+
+

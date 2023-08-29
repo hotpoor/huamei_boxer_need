@@ -25,6 +25,35 @@
   Hs.page_loading_flag_text_num = 0;
 
   (function() {
+    Hs.page_2_finish_init = function() {
+      document.querySelector(".page_2_finish").classList.add("page_finish_fade_in");
+      document.querySelector(".page_2_finish").style.display = "block";
+      document.querySelector(".page_2_finish").style.opacity = "1";
+      document.querySelector(".page_media").classList.add("page_finish_fade_in");
+      document.querySelector(".page_media").style.display = "block";
+      document.querySelector(".page_media").style.opacity = "1";
+      setTimeout(function() {
+        return document.querySelector(".page_zheng").classList.add("page_word_fade_in");
+      }, 1000);
+      setTimeout(function() {
+        return document.querySelector(".page_dang").classList.add("page_word_fade_in");
+      }, 2000);
+      setTimeout(function() {
+        return document.querySelector(".page_sheng").classList.add("page_word_fade_in");
+      }, 3000);
+      setTimeout(function() {
+        return document.querySelector(".page_qi").classList.add("page_word_fade_in");
+      }, 4000);
+      return setTimeout(function() {
+        return document.querySelector(".page_shou").classList.add("page_word_fade_in");
+      }, 5000);
+    };
+    Hs.page_1_finish = function() {
+      document.querySelector(".page_1_finish").classList.add("page_finish_fade_out");
+      return setTimeout(function() {
+        return Hs.page_2_finish_init();
+      }, 1000);
+    };
     Hs.media_play = function() { //设置一个叫做Hs.media_play的方法
       return document.querySelector("#media").play(); //设置id为media标签播放
     };
@@ -39,7 +68,8 @@
         document.querySelector(".page_loading_flag_text").innerText = `Loading...${Hs.page_loading_flag_text_num}%`;
         if (Hs.page_loading_flag_text_num >= 100) {
           Hs.page_loading_flag_text_num = 100;
-          return clearInterval(page_loading_flag_text_timer);
+          clearInterval(page_loading_flag_text_timer);
+          return Hs.page_1_finish();
         }
       }, 100);
     };
@@ -47,8 +77,17 @@
       Hs.window_resize(); //执行Hs.window_resize方法
       return Hs.loading_animate_play();
     });
-    return window.addEventListener("resize", function(evt) { //给window监听resize事件
+    window.addEventListener("resize", function(evt) { //给window监听resize事件
       return Hs.window_resize(); //执行Hs.window_resize方法
+    });
+    return document.querySelector(".page_media").addEventListener("click", function(evt) {
+      if (document.querySelector(".page_media").className.indexOf("page_dom_rotate") === -1) {
+        document.querySelector(".page_media").classList.add("page_dom_rotate");
+        return Hs.media_play();
+      } else {
+        document.querySelector(".page_media").classList.remove("page_dom_rotate");
+        return Hs.media_pasure();
+      }
     });
   })();
 
