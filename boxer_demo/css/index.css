@@ -287,7 +287,7 @@ body{
     font-size: medium;
 }
 
-.page_button{
+.page_button,.page_button1{
     position: absolute;
     left: calc(121/750.0*100%);
     top: calc(1204/1334.0*100%);
@@ -302,6 +302,95 @@ body{
     font-weight: bold;
     cursor: pointer;
 }
+
+
+.page_sheng1{
+    position: absolute;
+    left: calc(225/750.0*100%);
+    top: calc(226/1334.0*100%);
+    width: calc(49/750.0*100%);
+    height: calc(49/1334.0*100%);
+    background-image: url(../img/sheng1.png);
+    background-size: cover;
+}
+.page_qi1{
+    position: absolute;
+    left: calc(285/750.0*100%);
+    top: calc(221/1334.0*100%);
+    width: calc(58/750.0*100%);
+    height: calc(60/1334.0*100%);
+    background-image: url(../img/qi1.png);
+    background-size: cover;
+}
+.page_shou1{
+    position: absolute;
+    left: calc(355/750.0*100%);
+    top: calc(226/1334.0*100%);
+    width: calc(46/750.0*100%);
+    height: calc(49/1334.0*100%);
+    background-image: url(../img/shou1.png);
+    background-size: cover;
+}
+.page_deng1{
+    position: absolute;
+    left: calc(417/750.0*100%);
+    top: calc(225/1334.0*100%);
+    width: calc(50/750.0*100%);
+    height: calc(52/1334.0*100%);
+    background-image: url(../img/deng1.png);
+    background-size: cover;
+}
+.page_ji1{
+    position: absolute;
+    left: calc(478/750.0*100%);
+    top: calc(229/1334.0*100%);
+    width: calc(54/750.0*100%);
+    height: calc(43/1334.0*100%);
+    background-image: url(../img/ji1.png);
+    background-size: cover;
+}
+.page_3_finish{
+    display: none;
+    opacity: 0;
+}
+.page_title_text>div{
+    width: 100%;
+}
+.page_title_text_title{
+    text-align: left;
+    font-size: small;
+    margin: 10px 0px 5px 5px;
+}
+.page_title_text_input_box{
+    background-color: #eef0f4;
+    width: 100%;
+    height: calc(66/1334.0*100%);
+    border: 0;
+    border-radius: 20px;
+    text-align: center;
+    padding: 8px 0px;
+    font-size: small;
+
+}
+.page_title_text_input_box:focus{
+    outline:2px solid #ff9800;
+}
+.page_3_show_cover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px 0px;
+    width: calc(391/750.0*100%);
+    height: auto;
+    left: calc(177/750.0*100%);
+    top: calc(500/1334.0*100%);
+    position: absolute;
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+
+
 
 
 .page_word_fade_in{

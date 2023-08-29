@@ -12,6 +12,25 @@ Hs.window_resize = ()-> #设置一个叫做Hs.window_resize的方法
     document.querySelector(".page").style.height="#{Hs.current_height}px" #设置class为page标签的高度
 Hs.page_loading_flag_text_num = 0
 do ()->
+    Hs.page_3_finish_init = ()->
+        document.querySelector(".page_3_finish").classList.add("page_finish_fade_in")
+        document.querySelector(".page_3_finish").style.display="block"
+        document.querySelector(".page_3_finish").style.opacity="1"
+        setTimeout ()->
+            document.querySelector(".page_sheng1").classList.add("page_word_fade_in")
+        ,1000
+        setTimeout ()->
+            document.querySelector(".page_qi1").classList.add("page_word_fade_in")
+        ,2000
+        setTimeout ()->
+            document.querySelector(".page_shou1").classList.add("page_word_fade_in")
+        ,3000
+        setTimeout ()->
+            document.querySelector(".page_deng1").classList.add("page_word_fade_in")
+        ,4000
+        setTimeout ()->
+            document.querySelector(".page_ji1").classList.add("page_word_fade_in")
+        ,5000
     Hs.page_2_finish_init = ()->
         document.querySelector(".page_2_finish").classList.add("page_finish_fade_in")
         document.querySelector(".page_2_finish").style.display="block"
@@ -40,6 +59,12 @@ do ()->
         setTimeout ()->
             Hs.page_2_finish_init()
         ,1000
+    Hs.page_2_finish = ()->
+        document.querySelector(".page_2_finish").classList.remove("page_finish_fade_in")
+        document.querySelector(".page_2_finish").classList.add("page_finish_fade_out")
+        setTimeout ()->
+            Hs.page_3_finish_init()
+        ,1000
 
     Hs.media_play = ()-> #设置一个叫做Hs.media_play的方法
         document.querySelector("#media").play() #设置id为media标签播放
@@ -55,6 +80,29 @@ do ()->
                 clearInterval page_loading_flag_text_timer
                 Hs.page_1_finish()
         ,100
+
+    Hs.check_page_3_show_cover = (content)->
+        document.querySelector(".page_3_show_cover").style.display="block"
+        document.querySelector(".page_3_show_cover").innerText = content
+        setTimeout ()->
+            document.querySelector(".page_3_show_cover").style.display="none"
+        ,2000
+    Hs.check_page_3_input = ()->
+        if document.querySelector("#page_3_finish_name").value == ""
+            return Hs.check_page_3_show_cover("请输入您的姓名")
+        if document.querySelector("#page_3_finish_age").value == ""
+            return Hs.check_page_3_show_cover("请输入您的年龄")
+        if document.querySelector("#page_3_finish_addr").value == ""
+            return Hs.check_page_3_show_cover("请输入您的地址")
+        if document.querySelector("#page_3_finish_word").value == ""
+            return Hs.check_page_3_show_cover("请输入您的爱国宣言")
+
+
+
+
+
+
+
     window.addEventListener "load",(evt)-> #给window监听load事件
         Hs.window_resize() #执行Hs.window_resize方法
         Hs.loading_animate_play()
@@ -67,6 +115,11 @@ do ()->
         else
             document.querySelector(".page_media").classList.remove("page_dom_rotate")
             Hs.media_pasure()
+    document.querySelector(".page_button").addEventListener "click",(evt)->
+        Hs.page_2_finish()
+    document.querySelector(".page_button1").addEventListener "click",(evt)->
+        Hs.check_page_3_input()
+
 
 
     

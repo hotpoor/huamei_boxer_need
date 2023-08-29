@@ -25,6 +25,26 @@
   Hs.page_loading_flag_text_num = 0;
 
   (function() {
+    Hs.page_3_finish_init = function() {
+      document.querySelector(".page_3_finish").classList.add("page_finish_fade_in");
+      document.querySelector(".page_3_finish").style.display = "block";
+      document.querySelector(".page_3_finish").style.opacity = "1";
+      setTimeout(function() {
+        return document.querySelector(".page_sheng1").classList.add("page_word_fade_in");
+      }, 1000);
+      setTimeout(function() {
+        return document.querySelector(".page_qi1").classList.add("page_word_fade_in");
+      }, 2000);
+      setTimeout(function() {
+        return document.querySelector(".page_shou1").classList.add("page_word_fade_in");
+      }, 3000);
+      setTimeout(function() {
+        return document.querySelector(".page_deng1").classList.add("page_word_fade_in");
+      }, 4000);
+      return setTimeout(function() {
+        return document.querySelector(".page_ji1").classList.add("page_word_fade_in");
+      }, 5000);
+    };
     Hs.page_2_finish_init = function() {
       document.querySelector(".page_2_finish").classList.add("page_finish_fade_in");
       document.querySelector(".page_2_finish").style.display = "block";
@@ -54,6 +74,13 @@
         return Hs.page_2_finish_init();
       }, 1000);
     };
+    Hs.page_2_finish = function() {
+      document.querySelector(".page_2_finish").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_2_finish").classList.add("page_finish_fade_out");
+      return setTimeout(function() {
+        return Hs.page_3_finish_init();
+      }, 1000);
+    };
     Hs.media_play = function() { //设置一个叫做Hs.media_play的方法
       return document.querySelector("#media").play(); //设置id为media标签播放
     };
@@ -73,6 +100,27 @@
         }
       }, 100);
     };
+    Hs.check_page_3_show_cover = function(content) {
+      document.querySelector(".page_3_show_cover").style.display = "block";
+      document.querySelector(".page_3_show_cover").innerText = content;
+      return setTimeout(function() {
+        return document.querySelector(".page_3_show_cover").style.display = "none";
+      }, 2000);
+    };
+    Hs.check_page_3_input = function() {
+      if (document.querySelector("#page_3_finish_name").value === "") {
+        return Hs.check_page_3_show_cover("请输入您的姓名");
+      }
+      if (document.querySelector("#page_3_finish_age").value === "") {
+        return Hs.check_page_3_show_cover("请输入您的年龄");
+      }
+      if (document.querySelector("#page_3_finish_addr").value === "") {
+        return Hs.check_page_3_show_cover("请输入您的地址");
+      }
+      if (document.querySelector("#page_3_finish_word").value === "") {
+        return Hs.check_page_3_show_cover("请输入您的爱国宣言");
+      }
+    };
     window.addEventListener("load", function(evt) { //给window监听load事件
       Hs.window_resize(); //执行Hs.window_resize方法
       return Hs.loading_animate_play();
@@ -80,7 +128,7 @@
     window.addEventListener("resize", function(evt) { //给window监听resize事件
       return Hs.window_resize(); //执行Hs.window_resize方法
     });
-    return document.querySelector(".page_media").addEventListener("click", function(evt) {
+    document.querySelector(".page_media").addEventListener("click", function(evt) {
       if (document.querySelector(".page_media").className.indexOf("page_dom_rotate") === -1) {
         document.querySelector(".page_media").classList.add("page_dom_rotate");
         return Hs.media_play();
@@ -88,6 +136,12 @@
         document.querySelector(".page_media").classList.remove("page_dom_rotate");
         return Hs.media_pasure();
       }
+    });
+    document.querySelector(".page_button").addEventListener("click", function(evt) {
+      return Hs.page_2_finish();
+    });
+    return document.querySelector(".page_button1").addEventListener("click", function(evt) {
+      return Hs.check_page_3_input();
     });
   })();
 
