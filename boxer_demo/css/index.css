@@ -61,4 +61,53 @@ body{
     background-image: url(../img/bottom_center.png);
     background-size: cover;
 }
+.page_fly_bird_0{
+    position: absolute;
+    left: calc(552/750.0*100%);
+    top: calc(323/1334.0*100%);
+    width: calc(114/750.0*100%);
+    height: calc(52/1334.0*100%);
+    background-image: url(../img/fly_bird_0.png);
+    background-size: cover;
+    /* 1、设置动画名称 */
+    animation-name: page_fly_bird_0_animate;
+    /* 2、动画持续时间 */
+    animation-duration: 4s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: infinite;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+
+.page_fly_bird_1{
+    position: absolute;
+    left: calc(584/750.0*100%);
+    top: calc(377/1334.0*100%);
+    width: calc(80/750.0*100%);
+    height: calc(68/1334.0*100%);
+    background-image: url(../img/fly_bird_1.png);
+    background-size: cover;
+    /* 1、设置动画名称 */
+    animation-name: page_fly_bird_1_animate;
+    /* 2、动画持续时间 */
+    animation-duration: 5s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: infinite;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+
+
 

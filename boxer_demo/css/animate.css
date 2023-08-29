@@ -1,0 +1,102 @@
+@keyframes page_fly_bird_0_animate {
+    0% {
+        left: calc(750/750.0*100%);
+        opacity: 1;
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(0.8);
+    }
+    20%{
+        transform: scale(1);
+    }
+    30%{
+        transform: scale(0.8);
+    }
+    40%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.8);
+    }
+    60%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(0.8);
+    }
+    80%{
+        transform: scale(1);
+    }
+    90%{
+        transform: scale(0.8);
+    }
+    97% {
+        left: calc(-114/750.0*100%);
+        opacity: 1;
+    }
+    98%{
+        left: calc(-114/750.0*100%);
+        opacity: 0;
+    }
+    99%{
+        left: calc(750/750.0*100%);
+        opacity: 0;
+    }
+    100%{
+        left: calc(750/750.0*100%);
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes page_fly_bird_1_animate {
+    0% {
+        left: calc(750/750.0*100%);
+        opacity: 1;
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(0.8);
+    }
+    20%{
+        transform: scale(1);
+    }
+    30%{
+        transform: scale(0.8);
+    }
+    40%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.8);
+    }
+    60%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(0.8);
+    }
+    80%{
+        transform: scale(1);
+    }
+    90%{
+        transform: scale(0.8);
+    }
+    97% {
+        left: calc(-80/750.0*100%);
+        opacity: 1;
+    }
+    98%{
+        left: calc(-80/750.0*100%);
+        opacity: 0;
+    }
+    99%{
+        left: calc(750/750.0*100%);
+        opacity: 0;
+    }
+    100%{
+        left: calc(750/750.0*100%);
+        opacity: 1;
+        transform: scale(1);
+    }
+}
