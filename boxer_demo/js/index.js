@@ -33,9 +33,64 @@
 
   (function() {
     Hs.page_7_finish_init = function() {
+      document.querySelector(".page_star0").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_star1").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_star2").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_star3").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_star4").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_star5").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_star6").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_star7").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_star8").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_star0").classList.add("hide");
+      document.querySelector(".page_star1").classList.add("hide");
+      document.querySelector(".page_star2").classList.add("hide");
+      document.querySelector(".page_star3").classList.add("hide");
+      document.querySelector(".page_star4").classList.add("hide");
+      document.querySelector(".page_star5").classList.add("hide");
+      document.querySelector(".page_star6").classList.add("hide");
+      document.querySelector(".page_star7").classList.add("hide");
+      document.querySelector(".page_star8").classList.add("hide");
+      document.querySelector(".page_flag2").classList.remove("page_flag_up");
       document.querySelector(".page_7_finish").classList.add("page_finish_fade_in");
       document.querySelector(".page_7_finish").style.display = "block";
-      return document.querySelector(".page_7_finish").style.opacity = "1";
+      document.querySelector(".page_7_finish").style.opacity = "1";
+      setTimeout(function() {
+        document.querySelector(".page_star0").classList.add("page_finish_fade_in");
+        return document.querySelector(".page_star0").classList.remove("hide");
+      }, 500);
+      setTimeout(function() {
+        document.querySelector(".page_star1").classList.add("page_finish_fade_in");
+        return document.querySelector(".page_star1").classList.remove("hide");
+      }, 1000);
+      setTimeout(function() {
+        document.querySelector(".page_star2").classList.add("page_finish_fade_in");
+        return document.querySelector(".page_star2").classList.remove("hide");
+      }, 1500);
+      setTimeout(function() {
+        document.querySelector(".page_star3").classList.add("page_finish_fade_in");
+        return document.querySelector(".page_star3").classList.remove("hide");
+      }, 2000);
+      setTimeout(function() {
+        document.querySelector(".page_star4").classList.add("page_finish_fade_in");
+        return document.querySelector(".page_star4").classList.remove("hide");
+      }, 2500);
+      setTimeout(function() {
+        document.querySelector(".page_star5").classList.add("page_finish_fade_in");
+        return document.querySelector(".page_star5").classList.remove("hide");
+      }, 3000);
+      setTimeout(function() {
+        document.querySelector(".page_star6").classList.add("page_finish_fade_in");
+        return document.querySelector(".page_star6").classList.remove("hide");
+      }, 3500);
+      setTimeout(function() {
+        document.querySelector(".page_star7").classList.add("page_finish_fade_in");
+        return document.querySelector(".page_star7").classList.remove("hide");
+      }, 4000);
+      return setTimeout(function() {
+        document.querySelector(".page_star8").classList.add("page_finish_fade_in");
+        return document.querySelector(".page_star8").classList.remove("hide");
+      }, 4500);
     };
     Hs.page_6_finish_init = function() {
       document.querySelector(".page_6_finish").classList.add("page_finish_fade_in");
@@ -298,9 +353,16 @@
     document.querySelector(".page_show_error_continue2").addEventListener("click", function(evt) {
       return document.querySelector(".page_6_show_cover_error").classList.add("hide");
     });
-    return document.querySelector(".page_show_right_continue2").addEventListener("click", function(evt) {
+    document.querySelector(".page_show_right_continue2").addEventListener("click", function(evt) {
       Hs.page_6_finish();
       return document.querySelector(".page_6_show_cover").classList.add("hide");
+    });
+    document.querySelector(".page_button5").addEventListener("click", function(evt) {
+      document.querySelector(".page_button6").classList.remove("hide");
+      return document.querySelector(".page_button5").classList.add("hide");
+    });
+    return document.querySelector(".page_button6").addEventListener("click", function(evt) {
+      return document.querySelector(".page_flag2").classList.add("page_flag_up");
     });
   })();
 

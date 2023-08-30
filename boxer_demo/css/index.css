@@ -85,6 +85,98 @@ body{
     animation-fill-mode: forwards;
 }
 
+
+.page_star0{
+ 
+    position: absolute;
+    left: calc(37/750.0*100%);
+    top: calc(105/1334.0*100%);
+    width: calc(63/750.0*100%);
+    height: calc(61/1334.0*100%);
+    background-image: url(../img/star0.png);
+    background-size: cover;
+}
+.page_star1{
+  
+    position: absolute;
+    left: calc(80/750.0*100%);
+    top: calc(194/1334.0*100%);
+    width: calc(63/750.0*100%);
+    height: calc(62/1334.0*100%);
+    background-image: url(../img/star1.png);
+    background-size: cover;
+}
+.page_star2{
+
+    position: absolute;
+    left: calc(140/750.0*100%);
+    top: calc(271/1334.0*100%);
+    width: calc(64/750.0*100%);
+    height: calc(63/1334.0*100%);
+    background-image: url(../img/star2.png);
+    background-size: cover;
+}
+.page_star3{
+
+    position: absolute;
+    left: calc(221/750.0*100%);
+    top: calc(319/1334.0*100%);
+    width: calc(63/750.0*100%);
+    height: calc(61/1334.0*100%);
+    background-image: url(../img/star3.png);
+    background-size: cover;
+}
+.page_star4{
+
+    position: absolute;
+    left: calc(314/750.0*100%);
+    top: calc(325/1334.0*100%);
+    width: calc(111/750.0*100%);
+    height: calc(107/1334.0*100%);
+    background-image: url(../img/star4.png);
+    background-size: cover;
+}
+.page_star5{
+ 
+    position: absolute;
+    left: calc(467/750.0*100%);
+    top: calc(332/1334.0*100%);
+    width: calc(60/750.0*100%);
+    height: calc(62/1334.0*100%);
+    background-image: url(../img/star5.png);
+    background-size: cover;
+}
+.page_star6{
+
+    position: absolute;
+    left: calc(550/750.0*100%);
+    top: calc(294/1334.0*100%);
+    width: calc(61/750.0*100%);
+    height: calc(63/1334.0*100%);
+    background-image: url(../img/star6.png);
+    background-size: cover;
+}
+.page_star7{
+
+    position: absolute;
+    left: calc(617/750.0*100%);
+    top: calc(225/1334.0*100%);
+    width: calc(60/750.0*100%);
+    height: calc(63/1334.0*100%);
+    background-image: url(../img/star7.png);
+    background-size: cover;
+}
+.page_star8{
+    position: absolute;
+    left: calc(670/750.0*100%);
+    top: calc(141/1334.0*100%);
+    width: calc(60/750.0*100%);
+    height: calc(64/1334.0*100%);
+    background-image: url(../img/star8.png);
+    background-size: cover;
+}
+
+
 .page_fly_bird_1{
     position: absolute;
     left: calc(584/750.0*100%);
@@ -108,6 +200,75 @@ body{
     /* 7、动画结束时应用最后一帧 */
     animation-fill-mode: forwards;
 }
+
+.page_flag_up{
+    background-size: cover;
+    /* 1、设置动画名称 */
+    animation-name: page_flag_up;
+    /* 2、动画持续时间 */
+    animation-duration: 3s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: 1;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+
+
+
+.page_fly_bird_0_plus{
+    position: absolute;
+    left: calc(552/750.0*100%);
+    top: calc(323/1334.0*100%);
+    width: calc(114/750.0*100%);
+    height: calc(52/1334.0*100%);
+    background-image: url(../img/fly_bird_0.png);
+    background-size: cover;
+    /* 1、设置动画名称 */
+    animation-name: page_fly_bird_0_animate_plus;
+    /* 2、动画持续时间 */
+    animation-duration: 4s;
+    /* 3、动画执行速度 */
+    animation-timing-function: ease-out;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: infinite;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+
+.page_fly_bird_1_plus{
+    position: absolute;
+    left: calc(584/750.0*100%);
+    top: calc(377/1334.0*100%);
+    width: calc(80/750.0*100%);
+    height: calc(68/1334.0*100%);
+    background-image: url(../img/fly_bird_1.png);
+    background-size: cover;
+    /* 1、设置动画名称 */
+    animation-name: page_fly_bird_1_animate_plus;
+    /* 2、动画持续时间 */
+    animation-duration: 5s;
+    /* 3、动画执行速度 */
+    animation-timing-function: ease-out;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: infinite;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+
 .page_loading{
     position: absolute;
     left: calc(102/750.0*100%);
@@ -290,7 +451,7 @@ body{
     font-size: medium;
 }
 
-.page_button,.page_button1{
+.page_button,.page_button1,.page_button5{
     position: absolute;
     left: calc(121/750.0*100%);
     top: calc(1204/1334.0*100%);
@@ -305,7 +466,15 @@ body{
     font-weight: bold;
     cursor: pointer;
 }
-
+.page_button6{
+    position: absolute;
+    left: calc(480/750.0*100%);
+    top: calc(865/1334.0*100%);
+    width: calc(114/750.0*100%);
+    height: calc(115/1334.0*100%);
+    background-image: url(../img/button6.png);
+    background-size: cover;
+}
 
 .page_sheng1{
     position: absolute;
@@ -503,6 +672,36 @@ div.page_button2,div.page_button3,div.page_button4{
     color: white;
     line-height: 6vh;
     text-align: center;
+}
+
+
+
+.page_flag_base2{
+    position: absolute;
+    left: calc(14/750.0*100%);
+    top: calc(216/1334.0*100%);
+    width: calc(717/750.0*100%);
+    height: calc(1043/1334.0*100%);
+    background-image: url(../img/flag_base2.png);
+    background-size: cover;
+}
+.page_flag2{
+    position: absolute;
+    left: calc(377/750.0*100%);
+    top: calc(719/1334.0*100%);
+    width: calc(183/750.0*100%);
+    height: calc(152/1334.0*100%);
+    background-image: url(../img/flag1.gif);
+    background-size: cover;
+}
+.page_top_center{
+    position: absolute;
+    left: calc(79/750.0*100%);
+    top: calc(0/1334.0*100%);
+    width: calc(600/750.0*100%);
+    height: calc(321/1334.0*100%);
+    background-image: url(../img/top_center.png);
+    background-size: cover;
 }
 
 
