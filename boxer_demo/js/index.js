@@ -33,6 +33,12 @@
 
   (function() {
     Hs.page_7_finish_init = function() {
+      document.querySelector(".page_7_show_cover").classList.add("hide");
+      document.querySelector(".page_show_get_img").classList.remove("page_scale_in");
+      document.querySelector(".page_show_get_text_name").innerText = "";
+      document.querySelector(".page_show_get_text_age").innerText = "";
+      document.querySelector(".page_show_get_text_addr").innerText = "";
+      document.querySelector(".page_show_get_text_word").innerText = "";
       document.querySelector(".page_star0").classList.remove("page_finish_fade_in");
       document.querySelector(".page_star1").classList.remove("page_finish_fade_in");
       document.querySelector(".page_star2").classList.remove("page_finish_fade_in");
@@ -362,7 +368,15 @@
       return document.querySelector(".page_button5").classList.add("hide");
     });
     return document.querySelector(".page_button6").addEventListener("click", function(evt) {
-      return document.querySelector(".page_flag2").classList.add("page_flag_up");
+      document.querySelector(".page_flag2").classList.add("page_flag_up");
+      return setTimeout(function() {
+        document.querySelector(".page_7_show_cover").classList.remove("hide");
+        document.querySelector(".page_show_get_img").classList.add("page_scale_in");
+        document.querySelector(".page_show_get_text_name").innerText = Hs.page_info["name"];
+        document.querySelector(".page_show_get_text_age").innerText = Hs.page_info["age"];
+        document.querySelector(".page_show_get_text_addr").innerText = Hs.page_info["addr"];
+        return document.querySelector(".page_show_get_text_word").innerText = Hs.page_info["word"];
+      }, 3000);
     });
   })();
 

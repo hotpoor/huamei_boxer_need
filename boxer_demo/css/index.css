@@ -704,7 +704,69 @@ div.page_button2,div.page_button3,div.page_button4{
     background-size: cover;
 }
 
+.page_show_get_title{
+    position: absolute;
+    left: calc(254/750.0*100%);
+    top: calc(124/1334.0*100%);
+    width: calc(236/750.0*100%);
+    height: calc(59/1334.0*100%);
+    background-image: url(../img/huodexunzhang.png);
+    background-size: cover;
+}
+.page_show_get_img{
+    position: absolute;
+    left: calc(247/750.0*100%);
+    top: calc(274/1334.0*100%);
+    width: calc(254/750.0*100%);
+    height: calc(452/1334.0*100%);
+    background-image: url(../img/xiaoxiaoshengqishou.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.page_show_get_content{
+    position: absolute;
+    left: calc(32/750.0*100%);
+    top: calc(214/1334.0*100%);
+    width: calc(674/750.0*100%);
+    height: calc(855/1334.0*100%);
+    background-color: #ffeec6;
+    border-radius: 20px;
+}
 
+.page_show_get_text{
+    width: -webkit-fill-available;
+    padding: 40px;
+    padding-top: calc(1055/1334.0*100%);
+}
+span.page_show_get_text_first {
+    font-size: 4vh;
+    font-weight: bold;
+    color: #ff9800;
+    margin: 1vh;
+}
+.page_show_get_text_line0>span,
+.page_show_get_text_line1>span{
+    font-style: italic;
+}
+
+
+.page_scale_in{
+    /* 1、设置动画名称 */
+    animation-name: page_scale_in;
+    /* 2、动画持续时间 */
+    animation-duration: 1s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: 1;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
 
 
 
