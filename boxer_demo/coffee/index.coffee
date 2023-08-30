@@ -17,6 +17,10 @@ Hs.page_info =
     "addr":null
     "word":null
 do ()->
+    Hs.page_7_finish_init = ()->
+        document.querySelector(".page_7_finish").classList.add("page_finish_fade_in")
+        document.querySelector(".page_7_finish").style.display="block"
+        document.querySelector(".page_7_finish").style.opacity="1"
     Hs.page_6_finish_init = ()->
         document.querySelector(".page_6_finish").classList.add("page_finish_fade_in")
         document.querySelector(".page_6_finish").style.display="block"
@@ -30,6 +34,9 @@ do ()->
         document.querySelector(".page_4_finish").style.display="block"
         document.querySelector(".page_4_finish").style.opacity="1"
     Hs.page_3_finish_init = ()->
+        document.querySelector("#page_3_finish_name").value=""
+        document.querySelector("#page_3_finish_age").value=""
+        document.querySelector("#page_3_finish_addr").value=""
         document.querySelector(".page_3_finish").classList.add("page_finish_fade_in")
         document.querySelector(".page_3_finish").style.display="block"
         document.querySelector(".page_3_finish").style.opacity="1"
@@ -104,9 +111,9 @@ do ()->
     Hs.page_6_finish = ()->
         document.querySelector(".page_6_finish").classList.remove("page_finish_fade_in")
         document.querySelector(".page_6_finish").classList.add("page_finish_fade_out")
-        # setTimeout ()->
-        #     Hs.page_7_finish_init()
-        # ,1000
+        setTimeout ()->
+            Hs.page_7_finish_init()
+        ,1000
 
 
 
@@ -208,6 +215,8 @@ do ()->
         document.querySelector(".page_4_show_cover_error").classList.add("hide")
     document.querySelector(".page_show_right_continue").addEventListener "click",(evt)->
         Hs.page_4_finish()
+        document.querySelector(".page_4_show_cover").classList.add("hide")
+
 
 
     document.querySelectorAll(".page_5_option").forEach (element)->
@@ -222,6 +231,8 @@ do ()->
         document.querySelector(".page_5_show_cover_error").classList.add("hide")
     document.querySelector(".page_show_right_continue1").addEventListener "click",(evt)->
         Hs.page_5_finish()
+        document.querySelector(".page_5_show_cover").classList.add("hide")
+
 
     document.querySelectorAll(".page_6_option").forEach (element)->
         element.addEventListener "click",(evt)->
@@ -235,6 +246,7 @@ do ()->
         document.querySelector(".page_6_show_cover_error").classList.add("hide")
     document.querySelector(".page_show_right_continue2").addEventListener "click",(evt)->
         Hs.page_6_finish()
+        document.querySelector(".page_6_show_cover").classList.add("hide")
         
 
     

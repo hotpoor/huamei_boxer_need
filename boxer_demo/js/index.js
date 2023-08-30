@@ -32,6 +32,11 @@
   };
 
   (function() {
+    Hs.page_7_finish_init = function() {
+      document.querySelector(".page_7_finish").classList.add("page_finish_fade_in");
+      document.querySelector(".page_7_finish").style.display = "block";
+      return document.querySelector(".page_7_finish").style.opacity = "1";
+    };
     Hs.page_6_finish_init = function() {
       document.querySelector(".page_6_finish").classList.add("page_finish_fade_in");
       document.querySelector(".page_6_finish").style.display = "block";
@@ -48,6 +53,9 @@
       return document.querySelector(".page_4_finish").style.opacity = "1";
     };
     Hs.page_3_finish_init = function() {
+      document.querySelector("#page_3_finish_name").value = "";
+      document.querySelector("#page_3_finish_age").value = "";
+      document.querySelector("#page_3_finish_addr").value = "";
       document.querySelector(".page_3_finish").classList.add("page_finish_fade_in");
       document.querySelector(".page_3_finish").style.display = "block";
       document.querySelector(".page_3_finish").style.opacity = "1";
@@ -127,11 +135,11 @@
     };
     Hs.page_6_finish = function() {
       document.querySelector(".page_6_finish").classList.remove("page_finish_fade_in");
-      return document.querySelector(".page_6_finish").classList.add("page_finish_fade_out");
+      document.querySelector(".page_6_finish").classList.add("page_finish_fade_out");
+      return setTimeout(function() {
+        return Hs.page_7_finish_init();
+      }, 1000);
     };
-    // setTimeout ()->
-    //     Hs.page_7_finish_init()
-    // ,1000
     Hs.media_play = function() { //设置一个叫做Hs.media_play的方法
       return document.querySelector("#media").play(); //设置id为media标签播放
     };
@@ -255,7 +263,8 @@
       return document.querySelector(".page_4_show_cover_error").classList.add("hide");
     });
     document.querySelector(".page_show_right_continue").addEventListener("click", function(evt) {
-      return Hs.page_4_finish();
+      Hs.page_4_finish();
+      return document.querySelector(".page_4_show_cover").classList.add("hide");
     });
     document.querySelectorAll(".page_5_option").forEach(function(element) {
       return element.addEventListener("click", function(evt) {
@@ -272,7 +281,8 @@
       return document.querySelector(".page_5_show_cover_error").classList.add("hide");
     });
     document.querySelector(".page_show_right_continue1").addEventListener("click", function(evt) {
-      return Hs.page_5_finish();
+      Hs.page_5_finish();
+      return document.querySelector(".page_5_show_cover").classList.add("hide");
     });
     document.querySelectorAll(".page_6_option").forEach(function(element) {
       return element.addEventListener("click", function(evt) {
@@ -289,7 +299,8 @@
       return document.querySelector(".page_6_show_cover_error").classList.add("hide");
     });
     return document.querySelector(".page_show_right_continue2").addEventListener("click", function(evt) {
-      return Hs.page_6_finish();
+      Hs.page_6_finish();
+      return document.querySelector(".page_6_show_cover").classList.add("hide");
     });
   })();
 
