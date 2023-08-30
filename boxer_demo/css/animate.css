@@ -146,3 +146,12 @@
         opacity: 1;
     }
 }
+
+@keyframes page_rotate_y {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}

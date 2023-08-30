@@ -24,7 +24,29 @@
 
   Hs.page_loading_flag_text_num = 0;
 
+  Hs.page_info = {
+    "name": null,
+    "age": null,
+    "addr": null,
+    "word": null
+  };
+
   (function() {
+    Hs.page_6_finish_init = function() {
+      document.querySelector(".page_6_finish").classList.add("page_finish_fade_in");
+      document.querySelector(".page_6_finish").style.display = "block";
+      return document.querySelector(".page_6_finish").style.opacity = "1";
+    };
+    Hs.page_5_finish_init = function() {
+      document.querySelector(".page_5_finish").classList.add("page_finish_fade_in");
+      document.querySelector(".page_5_finish").style.display = "block";
+      return document.querySelector(".page_5_finish").style.opacity = "1";
+    };
+    Hs.page_4_finish_init = function() {
+      document.querySelector(".page_4_finish").classList.add("page_finish_fade_in");
+      document.querySelector(".page_4_finish").style.display = "block";
+      return document.querySelector(".page_4_finish").style.opacity = "1";
+    };
     Hs.page_3_finish_init = function() {
       document.querySelector(".page_3_finish").classList.add("page_finish_fade_in");
       document.querySelector(".page_3_finish").style.display = "block";
@@ -46,6 +68,7 @@
       }, 5000);
     };
     Hs.page_2_finish_init = function() {
+      document.querySelector(".page_center_center").classList.remove("hide");
       document.querySelector(".page_2_finish").classList.add("page_finish_fade_in");
       document.querySelector(".page_2_finish").style.display = "block";
       document.querySelector(".page_2_finish").style.opacity = "1";
@@ -81,6 +104,34 @@
         return Hs.page_3_finish_init();
       }, 1000);
     };
+    Hs.page_3_finish = function() {
+      document.querySelector(".page_3_finish").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_3_finish").classList.add("page_finish_fade_out");
+      return setTimeout(function() {
+        return Hs.page_4_finish_init();
+      }, 1000);
+    };
+    Hs.page_4_finish = function() {
+      document.querySelector(".page_4_finish").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_4_finish").classList.add("page_finish_fade_out");
+      return setTimeout(function() {
+        return Hs.page_5_finish_init();
+      }, 1000);
+    };
+    Hs.page_5_finish = function() {
+      document.querySelector(".page_5_finish").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_5_finish").classList.add("page_finish_fade_out");
+      return setTimeout(function() {
+        return Hs.page_6_finish_init();
+      }, 1000);
+    };
+    Hs.page_6_finish = function() {
+      document.querySelector(".page_6_finish").classList.remove("page_finish_fade_in");
+      return document.querySelector(".page_6_finish").classList.add("page_finish_fade_out");
+    };
+    // setTimeout ()->
+    //     Hs.page_7_finish_init()
+    // ,1000
     Hs.media_play = function() { //设置一个叫做Hs.media_play的方法
       return document.querySelector("#media").play(); //设置id为media标签播放
     };
@@ -120,6 +171,52 @@
       if (document.querySelector("#page_3_finish_word").value === "") {
         return Hs.check_page_3_show_cover("请输入您的爱国宣言");
       }
+      Hs.page_info = {
+        "name": document.querySelector("#page_3_finish_name").value,
+        "age": document.querySelector("#page_3_finish_age").value,
+        "addr": document.querySelector("#page_3_finish_addr").value,
+        "word": document.querySelector("#page_3_finish_word").value
+      };
+      return Hs.page_3_finish();
+    };
+    Hs.chec_page_4_show_cover = function() {
+      return document.querySelector(".page_4_show_cover").classList.remove("hide");
+    };
+    Hs.chec_page_4_show_cover_error = function() {
+      return document.querySelector(".page_4_show_cover_error").classList.remove("hide");
+    };
+    Hs.check_page_4_option = function() {
+      if (document.querySelector(".page_4_option_selected").className.indexOf("page_4_option_answer") === -1) {
+        return Hs.chec_page_4_show_cover_error();
+      } else {
+        return Hs.chec_page_4_show_cover();
+      }
+    };
+    Hs.chec_page_5_show_cover = function() {
+      return document.querySelector(".page_5_show_cover").classList.remove("hide");
+    };
+    Hs.chec_page_5_show_cover_error = function() {
+      return document.querySelector(".page_5_show_cover_error").classList.remove("hide");
+    };
+    Hs.check_page_5_option = function() {
+      if (document.querySelector(".page_5_option_selected").className.indexOf("page_5_option_answer") === -1) {
+        return Hs.chec_page_5_show_cover_error();
+      } else {
+        return Hs.chec_page_5_show_cover();
+      }
+    };
+    Hs.chec_page_6_show_cover = function() {
+      return document.querySelector(".page_6_show_cover").classList.remove("hide");
+    };
+    Hs.chec_page_6_show_cover_error = function() {
+      return document.querySelector(".page_6_show_cover_error").classList.remove("hide");
+    };
+    Hs.check_page_6_option = function() {
+      if (document.querySelector(".page_6_option_selected").className.indexOf("page_6_option_answer") === -1) {
+        return Hs.chec_page_6_show_cover_error();
+      } else {
+        return Hs.chec_page_6_show_cover();
+      }
     };
     window.addEventListener("load", function(evt) { //给window监听load事件
       Hs.window_resize(); //执行Hs.window_resize方法
@@ -140,8 +237,59 @@
     document.querySelector(".page_button").addEventListener("click", function(evt) {
       return Hs.page_2_finish();
     });
-    return document.querySelector(".page_button1").addEventListener("click", function(evt) {
+    document.querySelector(".page_button1").addEventListener("click", function(evt) {
       return Hs.check_page_3_input();
+    });
+    document.querySelectorAll(".page_4_option").forEach(function(element) {
+      return element.addEventListener("click", function(evt) {
+        document.querySelectorAll(".page_4_option").forEach(function(element1) {
+          return element1.classList.remove("page_4_option_selected");
+        });
+        return this.classList.add("page_4_option_selected");
+      });
+    });
+    document.querySelector(".page_button2").addEventListener("click", function(evt) {
+      return Hs.check_page_4_option();
+    });
+    document.querySelector(".page_show_error_continue").addEventListener("click", function(evt) {
+      return document.querySelector(".page_4_show_cover_error").classList.add("hide");
+    });
+    document.querySelector(".page_show_right_continue").addEventListener("click", function(evt) {
+      return Hs.page_4_finish();
+    });
+    document.querySelectorAll(".page_5_option").forEach(function(element) {
+      return element.addEventListener("click", function(evt) {
+        document.querySelectorAll(".page_5_option").forEach(function(element1) {
+          return element1.classList.remove("page_5_option_selected");
+        });
+        return this.classList.add("page_5_option_selected");
+      });
+    });
+    document.querySelector(".page_button3").addEventListener("click", function(evt) {
+      return Hs.check_page_5_option();
+    });
+    document.querySelector(".page_show_error_continue1").addEventListener("click", function(evt) {
+      return document.querySelector(".page_5_show_cover_error").classList.add("hide");
+    });
+    document.querySelector(".page_show_right_continue1").addEventListener("click", function(evt) {
+      return Hs.page_5_finish();
+    });
+    document.querySelectorAll(".page_6_option").forEach(function(element) {
+      return element.addEventListener("click", function(evt) {
+        document.querySelectorAll(".page_6_option").forEach(function(element1) {
+          return element1.classList.remove("page_6_option_selected");
+        });
+        return this.classList.add("page_6_option_selected");
+      });
+    });
+    document.querySelector(".page_button4").addEventListener("click", function(evt) {
+      return Hs.check_page_6_option();
+    });
+    document.querySelector(".page_show_error_continue2").addEventListener("click", function(evt) {
+      return document.querySelector(".page_6_show_cover_error").classList.add("hide");
+    });
+    return document.querySelector(".page_show_right_continue2").addEventListener("click", function(evt) {
+      return Hs.page_6_finish();
     });
   })();
 

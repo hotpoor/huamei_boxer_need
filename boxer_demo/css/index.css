@@ -113,7 +113,7 @@ body{
     left: calc(102/750.0*100%);
     top: calc(584/1334.0*100%);
     width: calc(551/750.0*100%);
-    height: calc(39/1334.0*100%);
+    height: calc(38/1334.0*100%);
     background-image: url(../img/loading.png);
     background-size: cover;
 }
@@ -155,12 +155,14 @@ body{
 }
 
 
-.page_2_finish{
+.page_2_finish,
+.page_3_finish,
+.page_4_finish,
+.page_5_finish,
+.page_6_finish{
     display: none;
     opacity: 0;
 }
-
-
 
 .page_center_center{
     position: absolute;
@@ -349,10 +351,7 @@ body{
     background-image: url(../img/ji1.png);
     background-size: cover;
 }
-.page_3_finish{
-    display: none;
-    opacity: 0;
-}
+
 .page_title_text>div{
     width: 100%;
 }
@@ -387,6 +386,120 @@ body{
     color: white;
     text-align: center;
     display: none;
+}
+
+
+.page_shengqikaoyan{
+    position: absolute;
+    left: calc(252/750.0*100%);
+    top: calc(173/1334.0*100%);
+    width: calc(249/750.0*100%);
+    height: calc(62/1334.0*100%);
+    background-image: url(../img/shengqikaoyan.png);
+    background-size: cover;
+}
+div.page_title_text_card_content{
+    text-align: left;
+    padding: 5px 30px;
+    color: #1e1d1d;
+    font-size: medium;
+    width: -webkit-fill-available;
+}
+div.page_title_text_card_content>div{
+    margin: 10px 0px 20px 0px;
+}
+
+
+div.page_button2,div.page_button3,div.page_button4{
+/*    position: absolute;*/
+/*    left: calc(121/750.0*100%);*/
+/*    top: calc(1204/1334.0*100%);*/
+    width: calc(506/750.0*100%);
+    height: calc(82/1334.0*100%);
+    background-image: url(../img/button.png);
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 6vh;
+    font-size: small;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.page_4_option,
+.page_5_option,
+.page_6_option{
+    cursor: pointer;
+}
+.page_4_option_selected,
+.page_5_option_selected,
+.page_6_option_selected{
+    color: #ff9800;
+}
+.page_4_show_cover_error,
+.page_4_show_cover,
+.page_5_show_cover_error,
+.page_5_show_cover,
+.page_6_show_cover_error,
+.page_6_show_cover{
+    position: absolute;
+    left: calc(0/750.0*100%);
+    top: calc(0/1334.0*100%);
+    width: calc(750/750.0*100%);
+    height: calc(1334/1334.0*100%);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.page_show_error{
+    position: absolute;
+    left: calc(248/750.0*100%);
+    top: calc(492/1334.0*100%);
+    width: calc(254/750.0*100%);
+    height: calc(248/1334.0*100%);
+    background-image: url(../img/show_error.png);
+    background-size: cover;
+}
+.page_show_error_title{
+    position: absolute;
+    left: calc(251/750.0*100%);
+    top: calc(368/1334.0*100%);
+    width: calc(272/750.0*100%);
+    height: calc(58/1334.0*100%);
+    background-image: url(../img/show_error_title.png);
+    background-size: cover;
+}
+.page_show_right{
+    position: absolute;
+    left: calc(248/750.0*100%);
+    top: calc(492/1334.0*100%);
+    width: calc(254/750.0*100%);
+    height: calc(248/1334.0*100%);
+    background-image: url(../img/show_right.png);
+    background-size: cover;
+}
+.page_show_right_title{
+    position: absolute;
+    left: calc(251/750.0*100%);
+    top: calc(368/1334.0*100%);
+    width: calc(272/750.0*100%);
+    height: calc(58/1334.0*100%);
+    background-image: url(../img/show_right_title.png);
+    background-size: cover;
+}
+
+
+.page_show_error_continue,.page_show_right_continue,
+.page_show_error_continue1,.page_show_right_continue1,
+.page_show_error_continue2,.page_show_right_continue2
+{
+    position: absolute;
+    left: calc(122/750.0*100%);
+    top: calc(834/1334.0*100%);
+    width: calc(506/750.0*100%);
+    height: calc(82/1334.0*100%);
+    background-image: url(../img/show_cover_button.png);
+    background-size: cover;
+    color: white;
+    line-height: 6vh;
+    text-align: center;
 }
 
 
@@ -465,6 +578,23 @@ body{
     /* animation-delay: 2s; */
     /* 5、设置动画播放次数 */
     animation-iteration-count: infinite;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}
+
+.page_rotate_y{
+    /* 1、设置动画名称 */
+    animation-name: page_rotate_y;
+    /* 2、动画持续时间 */
+    animation-duration: 1s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: 1;
     /* 6、设置动画是否反向播放 */
     animation-direction: normal;
     /* 7、动画结束时应用最后一帧 */
