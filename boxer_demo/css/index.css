@@ -451,7 +451,9 @@ body{
     font-size: medium;
 }
 
-.page_button,.page_button1,.page_button5{
+
+
+.page_button,.page_button1,.page_button5,.page_show_right_continue3{
     position: absolute;
     left: calc(121/750.0*100%);
     top: calc(1204/1334.0*100%);
@@ -751,6 +753,7 @@ span.page_show_get_text_first {
 }
 
 
+
 .page_scale_in{
     /* 1、设置动画名称 */
     animation-name: page_scale_in;
@@ -866,3 +869,19 @@ span.page_show_get_text_first {
 }
 
 
+.page_left_in{
+    /* 1、设置动画名称 */
+    animation-name: page_left_in;
+    /* 2、动画持续时间 */
+    animation-duration: 1s;
+    /* 3、动画执行速度 */
+    animation-timing-function: linear;
+    /* 4、等待时长 */
+    /* animation-delay: 2s; */
+    /* 5、设置动画播放次数 */
+    animation-iteration-count: 1;
+    /* 6、设置动画是否反向播放 */
+    animation-direction: normal;
+    /* 7、动画结束时应用最后一帧 */
+    animation-fill-mode: forwards;
+}

@@ -18,6 +18,10 @@ Hs.page_info =
     "word":null
 do ()->
     Hs.page_7_finish_init = ()->
+        document.querySelector(".page_show_right_continue3").classList.remove("page_left_in")
+        document.querySelector(".page_button5").classList.remove("hide")
+        document.querySelector(".page_button6").classList.add("hide")
+
         document.querySelector(".page_7_show_cover").classList.add("hide")
         document.querySelector(".page_show_get_img").classList.remove("page_scale_in")
 
@@ -191,6 +195,12 @@ do ()->
         setTimeout ()->
             Hs.page_7_finish_init()
         ,1000
+    Hs.page_7_finish = ()->
+        document.querySelector(".page_7_finish").classList.remove("page_finish_fade_in")
+        document.querySelector(".page_7_finish").classList.add("page_finish_fade_out")
+        setTimeout ()->
+            Hs.page_2_finish_init()
+        ,1000
 
 
 
@@ -340,7 +350,12 @@ do ()->
             document.querySelector(".page_show_get_text_addr").innerText = Hs.page_info["addr"]
             document.querySelector(".page_show_get_text_word").innerText = Hs.page_info["word"]
 
+            document.querySelector(".page_show_right_continue3").classList.add("page_left_in")
+
         ,3000
-        
+    document.querySelector(".page_show_right_continue3").addEventListener "click",(evt)->
+        Hs.page_7_finish()
+
+
         
     

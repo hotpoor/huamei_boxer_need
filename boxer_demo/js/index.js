@@ -33,6 +33,9 @@
 
   (function() {
     Hs.page_7_finish_init = function() {
+      document.querySelector(".page_show_right_continue3").classList.remove("page_left_in");
+      document.querySelector(".page_button5").classList.remove("hide");
+      document.querySelector(".page_button6").classList.add("hide");
       document.querySelector(".page_7_show_cover").classList.add("hide");
       document.querySelector(".page_show_get_img").classList.remove("page_scale_in");
       document.querySelector(".page_show_get_text_name").innerText = "";
@@ -201,6 +204,13 @@
         return Hs.page_7_finish_init();
       }, 1000);
     };
+    Hs.page_7_finish = function() {
+      document.querySelector(".page_7_finish").classList.remove("page_finish_fade_in");
+      document.querySelector(".page_7_finish").classList.add("page_finish_fade_out");
+      return setTimeout(function() {
+        return Hs.page_2_finish_init();
+      }, 1000);
+    };
     Hs.media_play = function() { //设置一个叫做Hs.media_play的方法
       return document.querySelector("#media").play(); //设置id为media标签播放
     };
@@ -367,7 +377,7 @@
       document.querySelector(".page_button6").classList.remove("hide");
       return document.querySelector(".page_button5").classList.add("hide");
     });
-    return document.querySelector(".page_button6").addEventListener("click", function(evt) {
+    document.querySelector(".page_button6").addEventListener("click", function(evt) {
       document.querySelector(".page_flag2").classList.add("page_flag_up");
       return setTimeout(function() {
         document.querySelector(".page_7_show_cover").classList.remove("hide");
@@ -375,8 +385,12 @@
         document.querySelector(".page_show_get_text_name").innerText = Hs.page_info["name"];
         document.querySelector(".page_show_get_text_age").innerText = Hs.page_info["age"];
         document.querySelector(".page_show_get_text_addr").innerText = Hs.page_info["addr"];
-        return document.querySelector(".page_show_get_text_word").innerText = Hs.page_info["word"];
+        document.querySelector(".page_show_get_text_word").innerText = Hs.page_info["word"];
+        return document.querySelector(".page_show_right_continue3").classList.add("page_left_in");
       }, 3000);
+    });
+    return document.querySelector(".page_show_right_continue3").addEventListener("click", function(evt) {
+      return Hs.page_7_finish();
     });
   })();
 

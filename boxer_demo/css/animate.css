@@ -288,3 +288,12 @@
         transform: scale(1);
     }
 }
+
+@keyframes page_left_in{
+    from{
+        left: calc(-506/750.0*100%);
+    }
+    to{
+        left: calc(121/750.0*100%);
+    }
+}
