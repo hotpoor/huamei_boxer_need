@@ -109,7 +109,7 @@ def do_search(line_str=line_str_demo,num_id=0):
 file = open('book0.txt', 'r',encoding='utf-8')
 
 lines = file.readlines()
-line_start =800
+line_start =811
 line_end = 1200
 lines = lines[line_start:len(lines)]
 for line in lines:
